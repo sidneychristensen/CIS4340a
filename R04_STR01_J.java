@@ -4,8 +4,8 @@
 public static String trim(String string) {
 	char ch;
 	int i;
-	for (i = 0; i < string.length(); i += 1){
-		ch = string.charAt(i);
+	for (i = 0; i < string.length(); i += Character.charCount(ch)){
+		ch = string.codePointAt(i);
 		if (!Character.isLetter(ch)){
 			break;
 		}
