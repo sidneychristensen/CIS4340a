@@ -5,9 +5,11 @@ class Format{
 	static Calendar c = new GregorianCalendar(1995, GregorianCalendar.MAY, 23);
 	public static void main(String[] args) {
 		// args[0] should contain the credit card expiration date 
-		// but might contain %1$tm, %1$te or %1$tY format specifiers
+		// Perform comparison with c,
+		//if it doesn't match, print the following line
 		System.out.format(
-		args[0] + "did not mathc! HINT: It was issued on %1$terd of some month", c
+			"%s did not match! HINT: It was issued on %terd of some month",
+			args[0], c
 		);
 	}
 }
