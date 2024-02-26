@@ -2,14 +2,8 @@
 //MET04-J
 
 class Super{
-	protected void doLogic(){
+	protected final void doLogic() { //Declare as final
 		System.out.println("Super invoked");
-	}
-}
-
-public class Sub extends Super {
-	public void doLogic() {
-		System.out.println("Sub invoked");
 		//Do sensitive operations
 	}
 }
